@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "dancing scripts";
+  src: url("../fonts/DancingScript-VariableFont_wght.ttf");
+}
+$primary-color: #f8f8f8;
+$icon-bg-color: #70b3ff;
+// $icon-bg-color: #92ceea;
+$icon-bg-hover: #44aaf2;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #616868;
+}
+
+#quote-box {
+  // border: 2px solid ;
+  height: 85vh;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+
+  // width: 200px;
+  // display: flex;
+  // justify-self: center;
+  // width: 100vw;
+}
+#quote-container {
+  border: 5px solid $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  // background-image: "../src/assets/SoundCompass-720x480.jpg";
+  background: rgba(0, 0, 0, 0.55) url("../assets/backgroundImg.jpg");
+  // background:  center center cover;
+  background-repeat: no-repeat;
+  // background-clip: content-box;
+  // background-attachment: ;
+  background-size: cover;
+
+  color: $primary-color;
+  background-blend-mode: darken;
+  p:first-child {
+    font-family: "dancing scripts";
+    font-size: 2.9em;
+    overflow: hidden;
+    // padding: 20px;
+    // margin: 2em .5em;
+    margin-top: 1.9em;
+    text-align: center;
+    width: 65%;
+    height: 60%;
+    // border: 2px solid blue;
+  }
+  #author-container {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin: 1.2rem 1.5em;
+    display: flex;
+    justify-content: center;
+    display: inline;
+
+    // border: 2px solid blue;
+
+    .hyphen {
+      font-size: 15px;
+      width: 20px;
+    }
+  }
+}
+
+#buttons {
+  ul {
+    list-style-type: none;
+    margin: 130px 30px;
+  }
+  li {
+    width: 55px;
+    height: 55px;
+    font-size: 40px;
+    background-color: $icon-bg-color;
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin: 50px 0;
+    cursor: pointer;
+    &:active {
+      background-color: $icon-bg-hover;
+    }
+
+    a {
+      color: $primary-color;
+    }
+  }
+  li:last-child {
+    // border: 5px solid black;
+    border-radius: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    span {
+      font-size: 20px;
+    }
+
+  }
+}
+#icon{
+      // border: 2px solid ;
+      display: flex;
+      
+  
+      .next-icon{
+        color: $icon-bg-color;
+        font-size: 1.8em;
+        // width: 20px;
+        display: block;
+        position: relative;
+        left: 14px;
+       
+        // transition-property: ;
+
+      }
+      .next-icon:last-child{
+        left: -14px;
+      
+        color: #92ceea;
+      }
+    }
+    #icon:hover{
+      // border: 2px solid ;
+      display: flex;
+      
+  
+      .next-icon{
+        color: $icon-bg-color;
+        font-size: 1.8em;
+        // width: 20px;
+        display: block;
+        position: relative;
+        left: 14px;
+        animation-name: move1;
+        // animation-duration: 2s;
+        animation-duration: 1.2s;
+        animation-iteration-count: 1;
+        // transition-property: ;
+
+      }
+      .next-icon:last-child{
+        left: -14px;
+        animation-name: move2;
+        color: #92ceea;
+      }
+      @keyframes move1 {
+        0%{
+          left: 14px;
+          opacity: 1;
+        }
+        50%{
+          left: 39px;
+          opacity: .1;
+        }
+        100%{
+          left: 14px;
+          opacity: 1;
+        }
+      }
+      @keyframes move2 {
+        0%{
+          left: -14px;
+          opacity: 1;
+        }
+        50%{
+          left: 11px;
+          opacity: .1;
+        }
+        100%{
+          left: -14px;
+          opacity: 1;
+        }
+      }
+    }
+
